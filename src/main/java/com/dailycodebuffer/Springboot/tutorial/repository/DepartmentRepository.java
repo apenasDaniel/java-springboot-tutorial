@@ -10,6 +10,6 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
     public Department findByDepartmentName(String departmentName);
 
-    @Query(value = "", nativeQuery = true)
+//    @Query(value = "", nativeQuery = true)
     public Department findByDepartmentNameIgnoreCase(String departmentName);
 }
