@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.*;
 
 
@@ -22,7 +19,7 @@ import javax.validation.constraints.*;
 public class Department {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long departmentId;
 
     @NotBlank(message = "Please, add department name.")
@@ -35,8 +32,11 @@ public class Department {
 //    @NegativeOrZero
 //    @Future
 //    @FutureOrPresent
+    @Column(name = "department_name")
     private String departmentName;
+    @Column(name = "department_address")
     private String departmentAddress;
+    @Column(name = "department_code")
     private String departmentCode;
 
 //    public Long getDepartmentId() {
