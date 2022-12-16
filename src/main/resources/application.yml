@@ -1,0 +1,18 @@
+#server:
+#  port: 8080
+#
+#spring:
+#  datasource:
+#    username: root
+#    url: jdbc:mysql://localhost:3306/dcbapp?useSSL=true
+#    password: 1knF$y0AHC#^
+#  jpa:
+#    properties:
+#      hibernate:
+#        jdbc:
+#          lob:
+#            non_contextual_creation: 'true'
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: 'true'
